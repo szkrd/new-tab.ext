@@ -1,0 +1,33 @@
+body {
+  padding: 10px;
+}
+
+.settings-row {
+  padding: 0 0 10px 0;
+}
+
+.settings-row.disabled {
+  opacity: 0.5;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 2px solid #eee;
+  border-top: 2px solid deepskyblue;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body.loading .loader {
+  display: block;
+}

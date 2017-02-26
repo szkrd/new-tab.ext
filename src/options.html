@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>New tab options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div class="page">
+  <b class="loader"></b>
+  <div>
+    <div class="settings-row" id="settings-row-page-title">
+      <label>
+        <label for="page-title">Page title:</label>
+        <br>
+        <input id="page-title" type="text" size="36" placeholder="leave empty for browser default">
+      </label>
+    </div>
+    <div class="settings-row" id="settings-row-url">
+      <label>
+        <label for="url">Url:</label>
+        <br>
+        <input id="url" type="text" size="36" placeholder="http://localhost/" >
+      </label>
+    </div>
+  </div>
+  <button id="save">Save</button>
+  <span id="status"></span>
+</div>
+<script src="options.js"></script>
+</body>
+</html>

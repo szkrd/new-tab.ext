@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "new-tab",
+  "version": "1.0.0",
+  "description": "Empty new tab page Chrome extension.",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "new-tab.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "storage"
+  ]
+}
