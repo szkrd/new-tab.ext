@@ -13,17 +13,23 @@ let log = {
   warn: s => console.warn(chalk.yellow(s.trim()))
 };
 
+function toName (s, nice = false) {
+  s = s.replace(/^@[^/]*\//, '').replace(/\.ext$/, '');
+  s = nice ? s.replace(/[-_]/g, ' ') : s;
+  return nice ? (s.charAt(0).toUpperCase() + s.slice(1)) : s;
+}
+
 // safety check
 if (process.platform === 'win32') {
   console.log(chalk.red('Windows is not supported.'));
 }
 
 // get app name, refresh manifest
-let appName = meta.name.replace(/^@[^/]*\//, '').replace(/\.ext$/, '');
 manifest.version = meta.version;
 manifest.description = meta.description;
-manifest.name = appName;
-ShellString(JSON.stringify(manifest, null, '  ')).to(p('../src/manifest.json'));
+manifest.name = toName(meta.name, true);
+ShellString(JSON.stringify(manifest, null, '  ') + '\n').to(p('../src/manifest.json'));
+let appName = toName(meta.name);
 
 // check for private key
 // see also: https://support.google.com/gsa/answer/6055166?hl=en
