@@ -21,3 +21,8 @@ This method is not supported on Windows, sorry.
 2. enable developer mode
 3. load unpacked extension
 4. pack extension
+
+### from the releases
+
+1. download crx
+2. drag and drop the crx file to the Chrome extensions page
