@@ -1,6 +1,6 @@
 # new-tab.ext
 
-Custom new tab page Chrome extension. 
+Custom new tab page Chromium extension. 
 
 * no spyware, no ads
 * set page title or url
@@ -11,11 +11,11 @@ Custom new tab page Chrome extension.
 
 This method is not supported on Windows, sorry.
 
-1. __optional__: put private key `new-tab.pem` into the root directory of the repo (use openssl or Chrome to generate one)
+1. __optional__: put private key `new-tab.pem` into the root directory of the repo (use openssl or Chromium to generate one)
 2. `npm run build`
-3. drag and drop the crx in _build_ to Chrome
+3. drag and drop the crx in _build_ to Chromium
 
-### packaging with Chrome
+### packaging with Chromium
 
 1. open settings/extensions
 2. enable developer mode
@@ -25,4 +25,4 @@ This method is not supported on Windows, sorry.
 ### from the releases
 
 1. download crx
-2. drag and drop the crx file to the Chrome extensions page
+2. drag and drop the crx file to the Chromium extensions page
